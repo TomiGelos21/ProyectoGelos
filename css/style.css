@@ -1,0 +1,290 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* HEADER */
+header {
+  height: 100px;
+  background: #c3ecec;
+  padding: 0 50px;
+  color: #FFFFFF;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo img {
+  height: 62px;
+  width: 62px;
+}
+
+.menu a {
+  color: #FFFFFF;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 0 10px;
+  transition: 0.4s;
+}
+.menu a:hover {
+  color: #4DBDEB;
+}
+
+.show-menu,
+.hide-menu {
+  font-size: 30px;
+  cursor: pointer;
+  display: none;
+  transition: 0.4s;
+}
+.show-menu:hover,
+.hide-menu:hover {
+  color: #4DBDEB;
+}
+
+.show-menu {
+  order: 1;
+}
+
+#check {
+  display: none;
+}
+
+/* BANNER */
+#banner {
+  padding: 0 50px;
+  background-image: url(/img/gatitos.jpg);
+  height: 45vh;
+  background-size: cover;
+  background-position: center;
+}
+#banner::before {
+  content: "";
+  background: rgba(56, 80, 100, 0.6);
+  position: absolute;
+  width: 100%;
+  height: 45vh;
+  left: 0;
+}
+
+.content-banner {
+  position: relative;
+  color: #FFF;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.content-banner h3 {
+  font-size: 30px;
+  font-weight: 400;
+  padding: 10px 0px;
+}
+.content-banner h3 span {
+  font-weight: 600;
+}
+
+.button-adoptar {
+  text-decoration: none;
+  color: #FFF;
+  border: 1px solid #DFEEEE;
+  padding: 20px 40px;
+  align-self: baseline;
+  transition: all 0.4s;
+}
+.button-adoptar:hover {
+  background: #DFEEEE;
+  color: #FFF;
+}
+
+/* INFORMACION */
+#info {
+  padding: 50px 50px;
+  font-size: 20px;
+  background: #c3ecec;
+}
+
+li {
+  margin: 15px 0px;
+}
+
+.info-text {
+  color: #FFF;
+}
+
+.button-saber-mas {
+  display: inline-block;
+  text-decoration: none;
+  color: #FFF;
+  padding: 10px 30px;
+  border: 3px solid #FFF;
+  border-radius: 30px;
+  margin-top: 15px;
+  transition: all 0.4s;
+}
+.button-saber-mas:hover {
+  background: #d4f0f0;
+  color: #FFF;
+}
+
+/* REDES */
+#redes {
+  padding: 0px 50px;
+  background: rgba(56, 80, 100, 0.6);
+}
+
+.content-redes {
+  padding: 50px;
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+}
+.content-redes div {
+  flex: 1;
+  margin: 20px 0px;
+  border-right: 2px solid rgba(255, 255, 255, 0.2);
+}
+.content-redes div i {
+  color: #c3ecec;
+}
+.content-redes div h6 {
+  color: #FFF;
+  font-size: 20px;
+  font-weight: 100;
+  margin: 10px 0px;
+}
+
+/* FORMULARIO */
+#contacto {
+  background: #DFEEEE;
+  padding: 50px 0px;
+  color: rgba(56, 80, 100, 0.6);
+  height: 60vh;
+}
+#contacto h4 {
+  text-align: center;
+  font-size: 25px;
+  margin-bottom: 20px;
+}
+#contacto form {
+  max-width: 80%;
+  margin: 0 auto;
+}
+
+.datos-form {
+  display: flex;
+}
+.datos-form div {
+  padding: 10px;
+  flex: 1;
+}
+
+form label {
+  display: block;
+  margin-bottom: 10px;
+}
+form input, form textarea {
+  background: #c3ecec;
+  border-radius: 10px;
+  border: 2px solid #c3ecec;
+  padding: 10px 5px;
+  outline: 0;
+  color: #FFF;
+  width: 100%;
+}
+form input:focus, form textarea:focus {
+  border-color: rgba(56, 80, 100, 0.6);
+  box-shadow: 0 0 0 1px rgba(56, 80, 100, 0.6);
+}
+
+.message {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+
+.button-form .button-saber-mas {
+  display: block;
+  border: 1px solid rgba(56, 80, 100, 0.6);
+  color: rgba(56, 80, 100, 0.6);
+  text-align: center;
+  transition: 0.4s;
+}
+
+/* FAQ */
+#faq {
+  padding: 50px 50px;
+  font-size: 20px;
+  background: #DFEEEE;
+  color: rgba(56, 80, 100, 0.6);
+}
+#faq div {
+  margin: 30px 0px;
+  padding: 30px;
+}
+
+/* ADOPCIONES */
+.con-container {
+  padding: 50px 50px;
+  font-size: 20px;
+  background: #DFEEEE;
+  color: rgba(56, 80, 100, 0.6);
+  display: block;
+  justify-content: space-between;
+  margin-right: 20px;
+  height: 80vh;
+  width: 200vh;
+}
+.con-container div img {
+  height: 350px;
+  width: 350px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  /* HEADER */
+  .show-menu,
+  .hide-menu {
+    display: block;
+  }
+  .menu {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: #c3ecec;
+    right: -100%;
+    top: 0;
+    text-align: center;
+    padding: 100px 0px;
+    z-index: 100;
+    transition: 0.8s;
+  }
+  .menu a {
+    display: block;
+    padding: 20px;
+  }
+  .hide-menu {
+    position: absolute;
+    top: 40px;
+    right: 40px;
+  }
+  #check:checked ~ .menu {
+    right: 0;
+  }
+  /* REDES */
+  .content-redes {
+    flex-direction: column;
+  }
+  .content-redes div {
+    border: none;
+  }
+  /* FORMULARIO */
+  .datos-form {
+    flex-direction: column;
+  }
+  /* ADOPCIONES */
+}
+
+/*# sourceMappingURL=style.css.map */
